@@ -25,9 +25,12 @@ export default function TextEditor() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div className="shadow-lg w-full h-auto m-auto ">
+      <h1 className="text-2xl font-semibold text-center mt-2">
+        Advance Text Editor
+      </h1>
       <button
         onClick={onOpen}
-        className="bg-gray-900 py-2 px-4 font-semibold text-white m-auto block"
+        className="bg-gray-900 py-2 px-4 font-semibold text-white m-auto block my-2"
       >
         Preview
       </button>
@@ -42,7 +45,7 @@ export default function TextEditor() {
         <Modal size={"full"} isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
+            <ModalHeader>Priview</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <div className="m-4 z-50" style={{ width: "100%" }}>
